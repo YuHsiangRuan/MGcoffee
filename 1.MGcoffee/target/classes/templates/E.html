@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+	<meta http-equiv="Content-type" content="text/html; charset=UTF-8" />
+	<link th:href="@{/bootstrap/css/bootstrap.min.css}" href="../bootstrap/css/bootstrap.min.css" rel="stylesheet"/>
+	<link th:href="@{/css/style.css}" href="../css/style.css" rel="stylesheet"/>
+	<link th:href="@{/bootstrap/css/sunny/jquery-ui.min.css}" href="../bootstrap/css/sunny/jquery-ui.min.css" rel="stylesheet"/>
+	<link th:href="@{/bootstrap/css/sunny/jquery-ui.theme.css}" href="../bootstrap/css/sunny/jquery-ui.theme.css" rel="stylesheet"/>
+	<link th:href="@{/bootstrap/css/sunny/jquery-ui.structure.css}" href="../bootstrap/css/sunny/jquery-ui.structure.css" rel="stylesheet"/>
+    <title>Coffee MG</title>
+    <style>
+    
+    	.head {
+    		text-align:center;
+    	}
+    	
+    	.nav {
+    		width:100%;
+    		height:50px;
+    		text-align:center;
+    		padding:5px;
+    	}
+    	
+    	#footer {
+    		text-align:center;
+    		padding:5px;
+    		bottom:0px;
+    		position: absolute;
+    	}
+    	
+    	#p {
+	    	font-family: impact;
+	    	font-size:300%;
+	    	color: black;
+	    }
+	    
+	    #p2 {
+	    	font-family: arial;
+	    	font-size: 150%;
+	    	color: black;
+	    }
+	    .form-group {
+	    	position: relative;
+	    	left: 100px;
+	    }
+    </style>
+</head>
+<body>
+	<div class="head">
+		<a href="/index"><div id="p">COFFEE MG</div></a>
+	</div>
+	
+	<div class="nav">
+		<div class="row">
+			<div class="col-md-2"></div>
+			<div class="col-md-2"><a href="/P"><div id="p2">Pour-over coffee</div></a></div>
+			<div class="col-md-2"><a href="/L"><div id="p2">Latte</div></a></div>
+			<div class="col-md-2"><a href="/E"><div id="p2">Espresso</div></a></div>
+			<div class="col-md-2"><a href="/S"><div id="p2">Shop</div></a></div>
+			<div class="col-md-2"></div>
+		</div>
+	</div>
+	<HR color="#000000" size="5" width="80%" align="center"/>
+	
+	<div class="container">
+		<table class="table table-hover">
+			<thead>
+	        <tr>
+		            <th>咖啡粉量(g)</th>
+		            <th>流速(s)</th>
+		            <th>色澤</th>
+		            <th>是否含油脂</th>
+		            <th>備註</th>
+		            <th>編輯</th>
+		            <th>刪除</th>
+	        </tr>
+	        </thead>
+	        <tbody>
+			<tr th:each="espressoEntity : ${espressos}">
+		            <!-- <th scope="row" th:text="${pourEntity.id}"></th>-->
+				    <td th:text="${espressoEntity.cvolum}"></td>
+				    <td th:text="${espressoEntity.flow}"></td>
+				    <td th:text="${espressoEntity.color}"></td>
+				    <td th:text="${espressoEntity.oil}"></td>
+				    <td th:text="${espressoEntity.note}"></td>
+				    <td><a th:href="@{/toEEdit(id=${espressoEntity.id})}">Edit</a></td>
+            		<td><a th:href="@{/edelete(id=${espressoEntity.id})}">Delete</a></td>
+	        </tr>
+	        </tbody>
+        </table>
+	</div>
+	
+	<div class="form-group">
+	    <div class="col-md-2 control-label">
+	        <a href="/toEAdd" th:href="@{/toEAdd}" class="btn btn-info">Add</a>
+	    </div>
+	</div>
+	
+	<div id="footer">
+		Copyright Ruan.co
+	</div>
+	
+	
+	
+	
+	
+	<script th:src="@{/bootstrap/js/jquery.js}" src="../bootstrap/js/jquery.js"></script>
+	<script th:src="@{/bootstrap/js/jquery-ui.min.js}" src="../bootstrap/js/jquery-ui.min.js"></script>
+	<script th:src="@{/scripts/index4.js}" src="../scripts/index3.js"></script>
+</body>
+</html>

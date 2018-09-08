@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+	<meta http-equiv="Content-type" content="text/html; charset=UTF-8" />
+	<link th:href="@{/bootstrap/css/bootstrap.min.css}" href="../bootstrap/css/bootstrap.min.css" rel="stylesheet"/>
+	<link th:href="@{/css/style.css}" href="../css/style.css" rel="stylesheet"/>
+	<link th:href="@{/bootstrap/css/sunny/jquery-ui.min.css}" href="../bootstrap/css/sunny/jquery-ui.min.css" rel="stylesheet"/>
+	<link th:href="@{/bootstrap/css/sunny/jquery-ui.theme.css}" href="../bootstrap/css/sunny/jquery-ui.theme.css" rel="stylesheet"/>
+	<link th:href="@{/bootstrap/css/sunny/jquery-ui.structure.css}" href="../bootstrap/css/sunny/jquery-ui.structure.css" rel="stylesheet"/>
+    <title>Coffee MG</title>
+    <style>
+    
+    	.head {
+    		text-align:center;
+    	}
+    	
+    	.nav {
+    		width:100%;
+    		height:50px;
+    		text-align:center;
+    		padding:5px;
+    	}
+    	
+    	#footer {
+    		text-align:center;
+    		padding:5px;
+    		bottom:0px;
+    		position: absolute;
+    	}
+    	
+    	#p {
+	    	font-family: impact;
+	    	font-size:300%;
+	    	color: black;
+	    }
+	    
+	    #p2 {
+	    	font-family: arial;
+	    	font-size: 150%;
+	    	color: black;
+	    }
+	    
+	    .form-group {
+	    	position: relative;
+	    	left: 100px;
+	    }
+    </style>
+</head>
+<body>
+	<div class="head">
+		<a href="/index"><div id="p">COFFEE MG</div></a>
+	</div>
+	
+	<div class="nav">
+		<div class="row">
+			<div class="col-md-2"></div>
+			<div class="col-md-2"><a href="/P"><div id="p2">Pour-over coffee</div></a></div>
+			<div class="col-md-2"><a href="/L"><div id="p2">Latte</div></a></div>
+			<div class="col-md-2"><a href="/E"><div id="p2">Espresso</div></a></div>
+			<div class="col-md-2"><a href="/S"><div id="p2">Shop</div></a></div>
+			<div class="col-md-2"></div>
+		</div>
+	</div>
+	<HR color="#000000" size="5" width="80%" align="center"/>
+	
+	<div class="container">
+		
+				<div class="with:80%">
+		    <form class="form-horizontal"   th:action="@{/eadd}" method="post">
+		        <div class="form-group">
+		            <label for="cvolum" class="col-sm-2 control-label">咖啡粉量(g)</label>
+		            <div class="col-sm-10">
+		                <input type="text" class="form-control" name="cvolum"  id="cvolum" placeholder="CVolum"/>
+		            </div>
+		        </div>
+		        <div class="form-group">
+		            <label for="flow" class="col-sm-2 control-label" >流速(s)</label>
+		            <div class="col-sm-10">
+		                <input type="text" class="form-control" name="flow" id="flow" placeholder="Flow"/>
+		            </div>
+		        </div>
+		        <div class="form-group">
+		            <label for="color" class="col-sm-2 control-label">色澤</label>
+		            <div class="col-sm-10">
+		                <input type="text" class="form-control" name="color"  id="color" placeholder="Color"/>
+		            </div>
+		        </div>
+		        <div class="form-group">
+		            <label for="oil" class="col-sm-2 control-label">是否含油脂</label>
+		            <div class="col-sm-10">
+		                <input type="text" class="form-control" name="oil"  id="oil" placeholder="Y/N"/>
+		            </div>
+		        </div>
+		        <div class="form-group">
+		            <label for="note" class="col-sm-2 control-label">備註</label>
+		            <div class="col-sm-10">
+		                <input type="text" class="form-control" name="note"  id="note" placeholder="Note"/>
+		            </div>
+		        </div>
+		        
+		        
+		        <div class="form-group">
+		            <div class="col-sm-offset-2 col-sm-10">
+		                <input type="submit" value="Submit" class="btn btn-info" />
+		                &nbsp; &nbsp; &nbsp;
+		                <input type="reset" value="Reset" class="btn btn-info" />
+		            </div>
+		
+		        </div>
+		    </form>
+		</div>
+	</div>
+	
+	
+	
+	<div id="footer">
+		Copyright Ruan.co
+	</div>
+	
+	
+	
+	
+	
+	<script th:src="@{/bootstrap/js/jquery.js}" src="../bootstrap/js/jquery.js"></script>
+	<script th:src="@{/bootstrap/js/jquery-ui.min.js}" src="../bootstrap/js/jquery-ui.min.js"></script>
+	<script th:src="@{/scripts/index4.js}" src="../scripts/index3.js"></script>
+</body>
+</html>

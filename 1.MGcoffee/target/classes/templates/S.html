@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+	<meta http-equiv="Content-type" content="text/html; charset=UTF-8" />
+	<link th:href="@{/bootstrap/css/bootstrap.min.css}" href="../bootstrap/css/bootstrap.min.css" rel="stylesheet"/>
+	<link th:href="@{/css/style.css}" href="../css/style.css" rel="stylesheet"/>
+	<link th:href="@{/bootstrap/css/sunny/jquery-ui.min.css}" href="../bootstrap/css/sunny/jquery-ui.min.css" rel="stylesheet"/>
+	<link th:href="@{/bootstrap/css/sunny/jquery-ui.theme.css}" href="../bootstrap/css/sunny/jquery-ui.theme.css" rel="stylesheet"/>
+	<link th:href="@{/bootstrap/css/sunny/jquery-ui.structure.css}" href="../bootstrap/css/sunny/jquery-ui.structure.css" rel="stylesheet"/>
+    <title>Coffee MG</title>
+    <style>
+    
+    	.head {
+    		text-align:center;
+    	}
+    	
+    	.nav {
+    		width:100%;
+    		height:50px;
+    		text-align:center;
+    		padding:5px;
+    	}
+    	
+    	#footer {
+    		text-align:center;
+    		padding:5px;
+    		bottom:0px;
+    		position: absolute;
+    	}
+    	
+    	#p {
+	    	font-family: impact;
+	    	font-size:300%;
+	    	color: black;
+	    }
+	    
+	    #p2 {
+	    	font-family: arial;
+	    	font-size: 150%;
+	    	color: black;
+	    }
+	    
+	    #p3 {
+	    	text-align:center;
+	    }
+	    
+	    
+	    .content_box{
+			display: inline-block;
+			border: 1px dotted #4F4F4F;
+			padding: 10px;
+			margin: 5px 5px 5px 0;
+			overflow:hidden;
+			width:337px;
+		}
+    </style>
+</head>
+<body>
+	<div class="head">
+		<a href="/index"><div id="p">COFFEE MG</div></a>
+	</div>
+	
+	<div class="nav">
+		<div class="row">
+			<div class="col-md-2"></div>
+			<div class="col-md-2"><a href="/P"><div id="p2">Pour-over coffee</div></a></div>
+			<div class="col-md-2"><a href="/L"><div id="p2">Latte</div></a></div>
+			<div class="col-md-2"><a href="/E"><div id="p2">Espresso</div></a></div>
+			<div class="col-md-2"><a href="/S"><div id="p2">Shop</div></a></div>
+			<div class="col-md-2"></div>
+		</div>
+	</div>
+	<HR color="#000000" size="5" width="80%" align="center"/>
+	
+	<div id="container" style="height:800px; width:728px; overflow:hidden; margin:0 auto;">      
+		     <div class="content_box"><a href="http://camacafe.com/"><img width="180" height="160" src="/images/s4.png" style="display:block; margin:auto;"></img></a><br></br><a href="http://camacafe.com/"><div id="p3">Cama現烘咖啡專門店</div></a></div>
+		     <div class="content_box"><a href="http://www.louisacoffee.co/"><img width="180" height="160" src="/images/s5.jpg" style="display:block; margin:auto;"></img></a><br></br><a href="http://www.louisacoffee.co/"><div id="p3">LOUISA | 露易莎咖啡</div></a></div>
+		     <div class="content_box"><a href="http://www.coffeestopover.com/"><img width="180" height="160" src="/images/s6.jpg" style="display:block; margin:auto;"></img></a><br></br><a href="http://www.coffeestopover.com/"><div id="p3">Coffee Stopover</div></a></div>
+		     <div class="content_box"><a href="http://www.ruten.com.tw/"><img width="180" height="160" src="/images/s1.png" style="display:block; margin:auto;"></img></a><br></br><a href="http://www.ruten.com.tw/"><div id="p3">露天拍賣<br></br></div></a></div>
+		     <div class="content_box"><a href="https://shopping.pchome.com.tw/"><img width="180" height="160" src="/images/s2.png" style="display:block; margin:auto;"></img></a><br></br><a href="https://shopping.pchome.com.tw/"><div id="p3">PChome<br></br></div></a></div>
+		     <div class="content_box"><a href="https://shopee.tw/"><img width="180" height="160" src="/images/s3.png" style="display:block; margin:auto;"></img></a><br></br><a href="https://shopee.tw/"><div id="p3">蝦皮購物<br></br></div></a></div>
+	</div>
+	
+	<div id="footer">
+	</div>
+	
+	
+	
+	
+	<script th:src="@{/bootstrap/js/jquery.js}" src="../bootstrap/js/jquery.js"></script>
+	<script th:src="@{/bootstrap/js/jquery-ui.min.js}" src="../bootstrap/js/jquery-ui.min.js"></script>
+	<script th:src="@{/bootstrap/js/masonry.pkgd.min.js}" src="../bootstrap/js/masonry.pkgd.min.js"></script>
+	<script th:src="@{/scripts/Shop.js}" src="../scripts/Shop.js"></script>
+</body>
+</html>
